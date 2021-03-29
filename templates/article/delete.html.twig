@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Delete Article
+
+{% endblock %}
+
+{% block body %}
+    <br/><br/><br/>
+    <div class='container'>
+        <form method="post">
+            <div class="form-group">
+                <label >ID = {{ article.id }}</label>
+                <label >name = {{ article.name }}</label>
+                <input type="text" name='id' class="form-control" value="{{ article.id }}" />
+            </div>
+            <button type='submit'  class='btn btn-danger' onclick="myFunction()"> Delete Article</button>
+        </form>
+    </div>
+
+    <script> function myFunction() {
+
+        confirm("Do you really want to delete ?");
+
+    }</script>
+{% endblock %}
